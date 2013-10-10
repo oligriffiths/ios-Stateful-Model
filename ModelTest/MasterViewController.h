@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 #import <CoreData/CoreData.h>
+#import "ArticlesModel.h"
 
-@interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate,ModelStateObserver>
 
-@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
-@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic) ModelCoreData *model;
+
+- (IBAction)sortChanged:(id)sender;
 
 @end
