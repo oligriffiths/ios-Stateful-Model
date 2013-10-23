@@ -20,5 +20,6 @@
 @property (nonatomic, readonly) id row;
 @property (nonatomic, readonly) id rowset;
 @property (nonatomic, readonly) NSInteger total;
+@property (nonatomic, readonly) NSArray* sections;
 
 @end

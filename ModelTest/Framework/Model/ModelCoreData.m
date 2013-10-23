@@ -53,7 +53,7 @@
 -(DatabaseEntity*)entity
 {
     if(!_entity){
-        _entity = [[DatabaseEntity alloc] init:[ObjectConfig config:@{@"name": [self.config get:@"entity_name"]}]];
+        _entity = [[DatabaseEntity alloc] initWithConfig:[ObjectConfig config:@{@"name": [self.config get:@"entity_name"]}]];
     }
     
     return _entity;

@@ -18,9 +18,9 @@
 
 @implementation DatabaseCoreDataStore
 
--(id)init:(ObjectConfig *)config
+-(id)initWithConfig:(ObjectConfig *)config
 {
-    self = [super init:config];
+    self = [super initWithConfig:config];
     
     //Set the model if passed in as a dependency
     if([config get:@"model"] && [[config get:@"model"] isKindOfClass:[NSManagedObjectModel class]]){

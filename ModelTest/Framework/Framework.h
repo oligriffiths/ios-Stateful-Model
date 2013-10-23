@@ -8,4 +8,6 @@
 
 #import "ObjectConfig.h"
 #import "Object.h"
+#import "UIViewController+Object.h"
 #import "ModelCoreData.h"
+#import "ViewControllerModel.h"

@@ -11,7 +11,7 @@
 @class Object;
 @protocol ObjectInterface <NSObject>
 
--(id)init:(ObjectConfig*)config;
+-(id)initWithConfig:(ObjectConfig*)config;
 -(ObjectConfig*)config;
 
 -(void)construct:(ObjectConfig*)config;

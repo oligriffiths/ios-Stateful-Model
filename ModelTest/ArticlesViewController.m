@@ -1,19 +1,27 @@
 //
-//  MasterViewController.m
+//  ArticlesViewController.m
 //  ModelTest
 //
-//  Created by Oli Griffiths on 07/10/2013.
+//  Created by Oli Griffiths on 22/10/2013.
 //  Copyright (c) 2013 Oli Griffiths. All rights reserved.
 //
 
-#import "MasterViewController.h"
-#import "DetailViewController.h"
+#import "ArticlesViewController.h"
 
-@implementation MasterViewController
+@implementation ArticlesViewController
 
--(void)viewDidLoad
+-(void)construct:(ObjectConfig *)config
 {
-    self.model = [[ArticlesModel alloc] init:[ObjectConfig config:@{@"observers":@[self]}]];
+    [super construct:config];
+    
+    [self.model setState:@{@"sort":@"title"}];
+}
+
+-(void)initialize:(ObjectConfig *)config
+{
+    [config append:@{@"model_name":@"Article"}];
+    
+    [super initialize:config];
 }
 
 
@@ -22,13 +30,31 @@
     if(sender.selectedSegmentIndex == 1){
         [self.model setState:@{@"direction":@"DESC"}];
     }else{
-        [self.model setState:@{@"direction":@"ASC"}];        
+        [self.model setState:@{@"direction":@"ASC"}];
     }
 }
 
 -(void)onModelStateChange:(NSString*)name
 {
     [self.tableView reloadData];
+}
+
+
+
+
+- (IBAction)editPushed:(UIBarButtonItem*)sender
+{
+    if(self.tableView.isEditing){
+        [self.tableView setEditing:NO animated:YES];
+        sender.title = @"Edit";
+    }else{
+        [self.tableView setEditing:YES animated:YES];
+        sender.title = @"Cancel";
+    }
+}
+
+- (IBAction)unwindToArticlesView:(UIStoryboardSegue *)segue {
+    //nothing goes here
 }
 
 #pragma mark UITableView data source methods
@@ -50,7 +76,7 @@
     
     //Attempt to assign row title/name attribute to cell text label
     id row = [self.model objectAtIndexPath:indexPath];
-    if([row respondsToSelector:@selector(title)]) cell.textLabel.text = [row title];
+    cell.textLabel.text = [row title];
     
     return cell;
 }

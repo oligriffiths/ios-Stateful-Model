@@ -12,17 +12,15 @@
 
 -(id)init
 {
-    return [self init:nil];
+    return [self initWithConfig:nil];
 }
 
--(id)init:(ObjectConfig *)config
+-(id)initWithConfig:(ObjectConfig *)config
 {
     if(self = [super init]){
         if(config == nil) config = [ObjectConfig new];
 
         [self construct:config];
-        
-        _config = config;
     }
     
     return self;
@@ -31,6 +29,8 @@
 -(void)construct:(ObjectConfig*)config
 {
     [self initialize:config];
+    
+    _config = config;
 }
 
 -(void)initialize:(ObjectConfig*)config

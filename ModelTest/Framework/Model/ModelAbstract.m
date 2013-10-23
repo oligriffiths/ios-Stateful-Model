@@ -27,7 +27,7 @@
 -(void)initialize:(ObjectConfig *)config
 {
     [config append:@{
-                     @"state": [[ModelState alloc] init:[[ObjectConfig alloc] init:@{@"observers": @[self]}]],
+                     @"state": [[ModelState alloc] initWithConfig:[[ObjectConfig alloc] initWithConfig:@{@"observers": @[self]}]],
                      @"observers":@[]
                      }];
     
@@ -79,6 +79,11 @@
     _total = 0;
     
     [self notifyObservers: name];
+}
+
+-(id)objectAtIndexPath:(NSIndexPath*)indexPath
+{
+    return nil;
 }
 
 -(NSString*)description

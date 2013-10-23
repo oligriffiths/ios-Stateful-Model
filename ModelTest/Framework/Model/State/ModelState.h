@@ -11,11 +11,7 @@
 #import "ModelAbstract.h"
 
 @interface ModelState : ObjectArray <ModelStateInterface>
-{
-    @protected
-    ModelAbstract *_model;
-    
-}
+
 @end
 
 @protocol StateObserver <NSObject>

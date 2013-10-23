@@ -13,7 +13,7 @@
 
 +(ObjectConfig*)config:(NSDictionary*)data;
 
--(ObjectConfig*)init:(NSDictionary*)data;
+-(ObjectConfig*)initWithConfig:(NSDictionary*)data;
 
 -(id)get:(NSString*)name;
 -(id)get:(NSString*)name default:(NSString*)fallback;
@@ -35,7 +35,7 @@
 @end
 
 
-@interface ObjectConfig : NSObject <ObjectConfigInterface>
+@interface ObjectConfig : NSObject <ObjectConfigInterface, NSCopying>
 {
     @protected NSMutableDictionary *_data;
 }

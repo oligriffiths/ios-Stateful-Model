@@ -10,7 +10,4 @@
 
 @interface BaseViewController : UIViewController
 
--(void)initialize;
--(void)localize;
-
 @end

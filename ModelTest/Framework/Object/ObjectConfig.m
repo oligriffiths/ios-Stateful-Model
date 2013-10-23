@@ -12,7 +12,7 @@
 
 +(ObjectConfig*)config:(NSDictionary*)data
 {
-    return [[[self class] alloc] init: data];
+    return [[[self class] alloc] initWithConfig: data];
 }
 
 -(id)init
@@ -23,7 +23,7 @@
     return self;
 }
 
--(id)init:(NSDictionary*)data
+-(id)initWithConfig:(NSDictionary*)data
 {
     if(self = [super init]){
         _data = [NSMutableDictionary dictionaryWithDictionary:data];
@@ -105,7 +105,13 @@
 
 +(ObjectConfig*)fromDictionary:(NSDictionary*) dictionary
 {
-    return [[[self class] alloc] init:dictionary];
+    return [[[self class] alloc] initWithConfig:dictionary];
+}
+
+#pragma mark NSCopying protocol methods
+- (id)copyWithZone:(NSZone *)zone
+{
+    return [[self class] fromDictionary:_data];
 }
 
 @end

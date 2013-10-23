@@ -34,7 +34,7 @@
 +(ObjectArray*)fromDictionary:(NSDictionary*) dictionary
 {
     ObjectConfig *config = [ObjectConfig config:@{@"data":dictionary}];
-    return [[ObjectArray alloc] init: config];
+    return [[ObjectArray alloc] initWithConfig: config];
 }
 
 -(NSDictionary*)toDictionary
