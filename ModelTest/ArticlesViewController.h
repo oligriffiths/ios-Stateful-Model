@@ -8,11 +8,10 @@
 
 #import "ViewControllerModel.h"
 
-@interface ArticlesViewController : ViewControllerModel
+@interface ArticlesViewController : ViewControllerModel <UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 - (IBAction)editPushed:(UIBarButtonItem*)sender;
-- (IBAction)addPushed:(id)sender;
 
 @end

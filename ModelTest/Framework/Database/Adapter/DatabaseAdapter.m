@@ -59,7 +59,9 @@
 
 -(NSFetchRequest*)fetchRequest
 {
-    return [NSFetchRequest new];
+    NSFetchRequest *request = [NSFetchRequest new];
+    request.sortDescriptors = @[];
+    return request;
 }
 
 -(NSFetchedResultsController*)fetch:(NSFetchRequest*)request

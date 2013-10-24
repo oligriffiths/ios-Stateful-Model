@@ -59,9 +59,9 @@
     return _entity;
 }
 
--(id)rowset
+-(NSArray*)rowset
 {
-    if(!_rowset)
+    if(!super.rowset)
     {
         NSFetchRequest *request = self.entity.fetchRequest;
         
@@ -71,17 +71,30 @@
         [self _buildRequestOrder:request];
         [self _buildRequestLimit:request];
         
-        _rowset = [self.entity fetch:request];
+        self.rowset = [self.entity fetch:request];
     }
     
-    return _rowset;
+    return super.rowset;
 }
 
--(ModelAbstract*)reset:(BOOL)toDefaults
+-(NSManagedObject*)row
 {
-    [super reset:toDefaults];
+    if(!super.row)
+    {
+        if([self.state isUnique]){
+            NSFetchRequest *request = self.entity.fetchRequest;
+            
+            [self _buildRequestProperties:request];
+            [self _buildRequestEntity:request];
+            [self _buildRequestConditions:request];
+            
+            self.row = [[self.entity fetch:request] firstObject];
+        }else{
+            self.row = [self.entity getEntity];
+        }
+    }
     
-    return self;
+    return super.row;
 }
 
 -(id)objectAtIndexPath:(NSIndexPath*)indexPath
@@ -94,7 +107,7 @@
 -(NSArray*)sections
 {
     [self rowset];
-    return self.entity.sections;
+    return self.rowset ? self.entity.sections : nil;
 }
 
 -(void)_buildRequestProperties:(NSFetchRequest*)request

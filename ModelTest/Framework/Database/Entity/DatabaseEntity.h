@@ -27,4 +27,6 @@ typedef void(^EntityFetchBlock)(void (^)(id response));
 
 -(id)objectAtIndexPath:(NSIndexPath*)indexPath;
 
+-(NSManagedObject*)getEntity;
+
 @end

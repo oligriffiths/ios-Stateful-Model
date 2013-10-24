@@ -13,10 +13,14 @@
 @protocol ModelInterface <NSObject>
 
 @property (nonatomic, readonly, setter=none:) id<ModelStateInterface> state;
-@property (nonatomic, readonly) id row;
-@property (nonatomic, readonly) id rowset;
+@property (nonatomic) NSManagedObject *row;
+@property (nonatomic) NSArray *rowset;
 @property (nonatomic, readonly) NSInteger total;
-@property (nonatomic, readonly) NSArray* sections;
+@property (nonatomic, readonly) NSArray *sections;
+
+-(ModelAbstract*)resetData;
+
+-(ModelAbstract*)reset;
 
 -(ModelAbstract*)reset:(BOOL)toDefaults;
 
@@ -26,12 +30,7 @@
 
 -(void)onStateChange:(NSString*)name;
 
--(id)row;
-
--(id)rowset;
-
 -(NSInteger)total;
-
 
 -(id)objectAtIndexPath:(NSIndexPath*)indexPath;
 

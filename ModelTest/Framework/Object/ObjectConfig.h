@@ -11,26 +11,26 @@
 @class ObjectConfig;
 @protocol ObjectConfigInterface <NSObject>
 
-+(ObjectConfig*)config:(NSDictionary*)data;
++(id<ObjectConfigInterface>)config:(NSDictionary*)data;
 
--(ObjectConfig*)initWithConfig:(NSDictionary*)data;
+-(id<ObjectConfigInterface>)initWithConfig:(NSDictionary*)data;
 
 -(id)get:(NSString*)name;
 -(id)get:(NSString*)name default:(NSString*)fallback;
 
--(ObjectConfig*)set:(NSString*)name value:(NSString*)value;
+-(void)set:(NSString *)name value:(id)value;
 
 -(BOOL)has:(NSString*)name;
 
--(ObjectConfig*)remove:(NSString*)name;
+-(id<ObjectConfigInterface>)remove:(NSString*)name;
 
--(ObjectConfig*)append:(id)config;
+-(id<ObjectConfigInterface>)append:(id)config;
 
 +(NSDictionary*)unbox:(id)data;
 
 -(NSDictionary*)toDictionary;
 
-+(ObjectConfig*)fromDictionary:(NSDictionary*)dictionary;
++(id<ObjectConfigInterface>)fromDictionary:(NSDictionary*)dictionary;
 
 @end
 

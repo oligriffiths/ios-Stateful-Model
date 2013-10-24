@@ -15,7 +15,7 @@
     return [self initWithConfig:nil];
 }
 
--(id)initWithConfig:(ObjectConfig *)config
+-(id)initWithConfig:(id<ObjectConfigInterface>)config
 {
     if(self = [super init]){
         if(config == nil) config = [ObjectConfig new];
@@ -26,14 +26,14 @@
     return self;
 }
 
--(void)construct:(ObjectConfig*)config
+-(void)construct:(id<ObjectConfigInterface>)config
 {
     [self initialize:config];
     
     _config = config;
 }
 
--(void)initialize:(ObjectConfig*)config
+-(void)initialize:(id<ObjectConfigInterface>)config
 {
     
 }

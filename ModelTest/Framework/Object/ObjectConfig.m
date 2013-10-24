@@ -10,7 +10,7 @@
 
 @implementation ObjectConfig
 
-+(ObjectConfig*)config:(NSDictionary*)data
++(id<ObjectConfigInterface>)config:(NSDictionary*)data
 {
     return [[[self class] alloc] initWithConfig: data];
 }
@@ -41,10 +41,9 @@
     return [self has:name] ? _data[name] : fallback;
 }
 
--(ObjectConfig*)set:(NSString*)name value:(NSString*)value
+-(void)set:(NSString *)name value:(id)value
 {
     _data[name] = value;
-    return self;
 }
 
 -(BOOL)has:(NSString*)name
@@ -52,13 +51,13 @@
     return _data[name] != nil ? YES : NO;
 }
 
--(ObjectConfig*)remove:(NSString*)name
+-(id<ObjectConfigInterface>)remove:(NSString*)name
 {
     [_data removeObjectForKey:name];
     return self;
 }
 
--(ObjectConfig*)append:(id) config
+-(id<ObjectConfigInterface>)append:(id) config
 {
     NSDictionary *data = [ObjectConfig unbox: config];
     
@@ -103,7 +102,7 @@
     return [NSDictionary dictionaryWithDictionary:dictionary];
 }
 
-+(ObjectConfig*)fromDictionary:(NSDictionary*) dictionary
++(id<ObjectConfigInterface>)fromDictionary:(NSDictionary*) dictionary
 {
     return [[[self class] alloc] initWithConfig:dictionary];
 }

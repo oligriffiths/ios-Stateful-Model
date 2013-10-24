@@ -69,4 +69,28 @@
     
 }
 
+
+-(NSArray*)actions
+{
+    NSArray *actions = objc_getAssociatedObject(self, @"ObjectActions");
+    
+    if(!actions){
+        
+        NSMutableArray *acts = [NSMutableArray new];
+        
+        for(NSString *method in [self methods]){
+            
+            if(method.length > 7 && [[method substringToIndex:7] isEqualToString:@"_action"]){
+                [acts addObject:[[method substringFromIndex:7] lowercaseString]];
+            }
+        }
+        
+        actions = [NSArray arrayWithArray:acts];
+        objc_setAssociatedObject(self, @"ObjectActions", actions, OBJC_ASSOCIATION_RETAIN);
+    }
+    
+    return actions;
+}
+
+
 @end

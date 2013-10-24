@@ -49,12 +49,23 @@
     }
 }
 
-
--(ModelAbstract*)reset:(BOOL)toDefaults
+-(ModelAbstract*)resetData
 {
     _rowset = nil;
     _row = nil;
     _total = 0;
+    
+    return self;
+}
+
+-(ModelAbstract*)reset
+{
+    return [self reset:YES];
+}
+
+-(ModelAbstract*)reset:(BOOL)toDefaults
+{
+    [self resetData];
     
     [self.state reset:toDefaults];
     

@@ -184,7 +184,7 @@
 
 -(BOOL)isUnique
 {
-    NSDictionary *states = self.values;
+    NSDictionary *states = [self values: YES];
     BOOL unique = NO;
     
     if(states.count){
@@ -193,7 +193,7 @@
         for(NSString *name in states)
         {
             id state = states[name];
-            if(([state isKindOfClass:[NSDictionary class]] || [state isKindOfClass:[NSArray class]]) && ((NSArray*) state).count > 0){
+            if(([state isKindOfClass:[NSDictionary class]] || [state isKindOfClass:[NSArray class]]) && ((NSArray*) state).count > 1){
                 unique = NO;
                 break;
             }

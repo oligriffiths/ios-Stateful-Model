@@ -8,6 +8,16 @@
 
 #import "ObjectConfig.h"
 
-@interface CommandContext : ObjectConfig
+@protocol CommandContextInterface
+
+@property (nonatomic) id subject;
+
+@end
+
+
+
+@interface CommandContext : ObjectConfig <CommandContextInterface>
+
++(CommandContext*)config:(NSDictionary*)data;
 
 @end

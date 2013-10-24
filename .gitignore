@@ -1,4 +1,6 @@
 .DS_Store
+ModelTest.xcodeproj/xcuserdata/*
+*.xcodeproj/project.xcworkspace/xcuserdata/
 *.xcworkspace/xcuserdata/*
 *.xcworkspace/xcshareddata/*
-*.xcodeproj/xcuserdata/*
+.xcodeproj/xcuserdata/*

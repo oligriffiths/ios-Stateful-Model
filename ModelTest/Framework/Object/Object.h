@@ -11,17 +11,17 @@
 @class Object;
 @protocol ObjectInterface <NSObject>
 
--(id)initWithConfig:(ObjectConfig*)config;
--(ObjectConfig*)config;
+-(id)initWithConfig:(id<ObjectConfigInterface>)config;
+-(id<ObjectConfigInterface>)config;
 
--(void)construct:(ObjectConfig*)config;
--(void)initialize:(ObjectConfig*)config;
+-(void)construct:(id<ObjectConfigInterface>)config;
+-(void)initialize:(id<ObjectConfigInterface>)config;
 
 @end
 
 
 @interface Object : NSObject <ObjectInterface>
 
-@property (readonly) ObjectConfig *config;
+@property (readonly) id<ObjectConfigInterface> config;
 
 @end

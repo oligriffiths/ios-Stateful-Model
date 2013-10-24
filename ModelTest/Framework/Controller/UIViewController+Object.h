@@ -18,4 +18,7 @@
 
 -(ObjectConfig*)config;
 
+-(NSArray*)actions;
+
+
 @end

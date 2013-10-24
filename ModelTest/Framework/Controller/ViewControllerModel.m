@@ -21,9 +21,7 @@
 
 -(void)initialize:(ObjectConfig *)config
 {
-    [config append:@{
-                     @"model_name": @""
-                     }];
+    [config append:@{@"model_name": @""}];
     
     [config append:@{
                      @"model": [[ModelCoreData alloc] initWithConfig:[ObjectConfig config:@{@"entity_name": [config get:@"model_name"], @"observers":@[self]}]]
@@ -33,9 +31,47 @@
 }
 
 
--(void)add
+-(NSManagedObject*)_actionAdd:(CommandContext*)context
 {
+    NSManagedObject *object = [self.model row];
     
+    [object setData:[context get:@"data"]];
+    
+    [object save];
+    
+    return object;
+}
+
+-(NSManagedObject*)_actionEdit:(CommandContext*)context
+{
+    NSManagedObject *object = [self.model row];
+    
+    if(object){
+        [object setData:context ? [context get:@"data"] : @{}];
+        
+        [object save];
+    }
+    
+    return object;
+}
+
+-(BOOL)_actionDelete:(CommandContext*)context
+{
+    NSArray *objects = [context get:@"objects"];
+    NSManagedObject *object = [context get:@"object"];
+    
+    if(!objects && object){
+        objects = @[object];
+    }
+
+    for(NSManagedObject *object in objects)
+    {
+        if(![object delete]){
+            @throw [NSException exceptionWithName:NSGenericException reason:@"Unable to delete object" userInfo:nil];
+        }
+    }
+    
+    return TRUE;
 }
 
 

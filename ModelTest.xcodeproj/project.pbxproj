@@ -16,8 +16,6 @@
 		4206F38D18033208008D65A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4206F38C18033208008D65A3 /* AppDelegate.m */; };
 		4206F39018033208008D65A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4206F38E18033208008D65A3 /* Main.storyboard */; };
 		4206F39318033208008D65A3 /* ModelTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4206F39118033208008D65A3 /* ModelTest.xcdatamodeld */; };
-		4206F39618033208008D65A3 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4206F39518033208008D65A3 /* MasterViewController.m */; };
-		4206F39918033208008D65A3 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4206F39818033208008D65A3 /* DetailViewController.m */; };
 		4206F39B18033208008D65A3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4206F39A18033208008D65A3 /* Images.xcassets */; };
 		4206F3A218033208008D65A3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4206F3A118033208008D65A3 /* XCTest.framework */; };
 		4206F3A318033208008D65A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4206F37A18033208008D65A3 /* Foundation.framework */; };
@@ -25,6 +23,28 @@
 		4206F3A518033208008D65A3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4206F38018033208008D65A3 /* CoreData.framework */; };
 		4206F3AD18033208008D65A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4206F3AB18033208008D65A3 /* InfoPlist.strings */; };
 		4206F3AF18033208008D65A3 /* ModelTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4206F3AE18033208008D65A3 /* ModelTestTests.m */; };
+		4206F3C1180332BF008D65A3 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4206F3BE180332BF008D65A3 /* BaseViewController.m */; };
+		4206F3CA18033516008D65A3 /* ObjectConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4206F3C918033516008D65A3 /* ObjectConfig.m */; };
+		4206F3CF180343FF008D65A3 /* Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 4206F3CE180343FF008D65A3 /* Object.m */; };
+		4206F3D518034633008D65A3 /* ModelAbstract.m in Sources */ = {isa = PBXBuildFile; fileRef = 4206F3D418034633008D65A3 /* ModelAbstract.m */; };
+		4206F3D918034CD3008D65A3 /* ModelState.m in Sources */ = {isa = PBXBuildFile; fileRef = 4206F3D818034CD3008D65A3 /* ModelState.m */; };
+		4206F3DC18034F49008D65A3 /* ObjectArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 4206F3DB18034F49008D65A3 /* ObjectArray.m */; };
+		42169A0218170C400002471A /* ViewControllerAbstract.m in Sources */ = {isa = PBXBuildFile; fileRef = 42169A0118170C400002471A /* ViewControllerAbstract.m */; };
+		42169A0718170F4B0002471A /* UIViewController+Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 42169A0618170F4B0002471A /* UIViewController+Object.m */; };
+		42169A0A181720100002471A /* ViewControllerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 42169A09181720100002471A /* ViewControllerModel.m */; };
+		42169A0D181721F60002471A /* ArticlesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42169A0C181721F60002471A /* ArticlesViewController.m */; };
+		4222E771181821BC0054845A /* CommandContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 4222E770181821BC0054845A /* CommandContext.m */; };
+		4222E77418182D660054845A /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4222E77318182D660054845A /* ArticleViewController.m */; };
+		4222E778181835210054845A /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 4222E777181835210054845A /* Article.m */; };
+		4222E77C181835BC0054845A /* NSManagedObject+Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 4222E77B181835BC0054845A /* NSManagedObject+Data.m */; };
+		4222E780181873670054845A /* NSString+StringHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 4222E77F181873670054845A /* NSString+StringHelpers.m */; };
+		426099C0180472E700794422 /* ModelCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 426099BF180472E700794422 /* ModelCoreData.m */; };
+		426099CC1805C0FD00794422 /* DatabaseCoreDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 426099CB1805C0FD00794422 /* DatabaseCoreDataStore.m */; };
+		426099D01805C14E00794422 /* DatabaseAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 426099CF1805C14E00794422 /* DatabaseAdapter.m */; };
+		426099D41805EE8000794422 /* DatabaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 426099D31805EE8000794422 /* DatabaseEntity.m */; };
+		426099D8180607CA00794422 /* ArticlesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 426099D7180607CA00794422 /* ArticlesModel.m */; };
+		4296A44618199BF200A2B927 /* NSObject+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = 4296A44518199BF200A2B927 /* NSObject+Methods.m */; };
+		4296A44A1819B6B300A2B927 /* UIView+AutolayoutHidden.m in Sources */ = {isa = PBXBuildFile; fileRef = 4296A4491819B6B300A2B927 /* UIView+AutolayoutHidden.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,16 +71,59 @@
 		4206F38C18033208008D65A3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4206F38F18033208008D65A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4206F39218033208008D65A3 /* ModelTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ModelTest.xcdatamodel; sourceTree = "<group>"; };
-		4206F39418033208008D65A3 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		4206F39518033208008D65A3 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		4206F39718033208008D65A3 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		4206F39818033208008D65A3 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		4206F39A18033208008D65A3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4206F3A018033208008D65A3 /* ModelTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModelTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4206F3A118033208008D65A3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4206F3AA18033208008D65A3 /* ModelTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ModelTestTests-Info.plist"; sourceTree = "<group>"; };
 		4206F3AC18033208008D65A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4206F3AE18033208008D65A3 /* ModelTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelTestTests.m; sourceTree = "<group>"; };
+		4206F3BD180332BF008D65A3 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		4206F3BE180332BF008D65A3 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		4206F3C818033516008D65A3 /* ObjectConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectConfig.h; path = Framework/Object/ObjectConfig.h; sourceTree = "<group>"; };
+		4206F3C918033516008D65A3 /* ObjectConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjectConfig.m; path = Framework/Object/ObjectConfig.m; sourceTree = "<group>"; };
+		4206F3CB18033D84008D65A3 /* Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Framework.h; path = Framework/Framework.h; sourceTree = "<group>"; };
+		4206F3CD180343FF008D65A3 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Object.h; path = Framework/Object/Object.h; sourceTree = "<group>"; };
+		4206F3CE180343FF008D65A3 /* Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Object.m; path = Framework/Object/Object.m; sourceTree = "<group>"; };
+		4206F3D318034633008D65A3 /* ModelAbstract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModelAbstract.h; path = Framework/Model/ModelAbstract.h; sourceTree = "<group>"; };
+		4206F3D418034633008D65A3 /* ModelAbstract.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModelAbstract.m; path = Framework/Model/ModelAbstract.m; sourceTree = "<group>"; };
+		4206F3D718034CD3008D65A3 /* ModelState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModelState.h; path = Framework/Model/State/ModelState.h; sourceTree = "<group>"; };
+		4206F3D818034CD3008D65A3 /* ModelState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModelState.m; path = Framework/Model/State/ModelState.m; sourceTree = "<group>"; };
+		4206F3DA18034F49008D65A3 /* ObjectArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectArray.h; path = Framework/Object/ObjectArray.h; sourceTree = "<group>"; };
+		4206F3DB18034F49008D65A3 /* ObjectArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjectArray.m; path = Framework/Object/ObjectArray.m; sourceTree = "<group>"; };
+		42169A0018170C400002471A /* ViewControllerAbstract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewControllerAbstract.h; path = Framework/Controller/ViewControllerAbstract.h; sourceTree = "<group>"; };
+		42169A0118170C400002471A /* ViewControllerAbstract.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewControllerAbstract.m; path = Framework/Controller/ViewControllerAbstract.m; sourceTree = "<group>"; };
+		42169A0518170F4B0002471A /* UIViewController+Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Object.h"; path = "Framework/Controller/UIViewController+Object.h"; sourceTree = "<group>"; };
+		42169A0618170F4B0002471A /* UIViewController+Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Object.m"; path = "Framework/Controller/UIViewController+Object.m"; sourceTree = "<group>"; };
+		42169A08181720100002471A /* ViewControllerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewControllerModel.h; path = Framework/Controller/ViewControllerModel.h; sourceTree = "<group>"; };
+		42169A09181720100002471A /* ViewControllerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewControllerModel.m; path = Framework/Controller/ViewControllerModel.m; sourceTree = "<group>"; };
+		42169A0B181721F60002471A /* ArticlesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticlesViewController.h; sourceTree = "<group>"; };
+		42169A0C181721F60002471A /* ArticlesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticlesViewController.m; sourceTree = "<group>"; };
+		4222E76F181821BC0054845A /* CommandContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommandContext.h; path = Framework/Command/Context/CommandContext.h; sourceTree = "<group>"; };
+		4222E770181821BC0054845A /* CommandContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommandContext.m; path = Framework/Command/Context/CommandContext.m; sourceTree = "<group>"; };
+		4222E77218182D660054845A /* ArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleViewController.h; sourceTree = "<group>"; };
+		4222E77318182D660054845A /* ArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = "<group>"; };
+		4222E776181835210054845A /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Article.h; sourceTree = "<group>"; };
+		4222E777181835210054845A /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Article.m; sourceTree = "<group>"; };
+		4222E77A181835BC0054845A /* NSManagedObject+Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+Data.h"; path = "Framework/Database/ManagedObject/NSManagedObject+Data.h"; sourceTree = "<group>"; };
+		4222E77B181835BC0054845A /* NSManagedObject+Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+Data.m"; path = "Framework/Database/ManagedObject/NSManagedObject+Data.m"; sourceTree = "<group>"; };
+		4222E77E181873670054845A /* NSString+StringHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+StringHelpers.h"; path = "Framework/Categories/NSString+StringHelpers.h"; sourceTree = "<group>"; };
+		4222E77F181873670054845A /* NSString+StringHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+StringHelpers.m"; path = "Framework/Categories/NSString+StringHelpers.m"; sourceTree = "<group>"; };
+		426099721804465200794422 /* ModelInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ModelInterface.h; path = Framework/Model/ModelInterface.h; sourceTree = "<group>"; };
+		42609973180446AD00794422 /* ModelStateInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ModelStateInterface.h; path = Framework/Model/State/ModelStateInterface.h; sourceTree = "<group>"; };
+		426099BE180472E700794422 /* ModelCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModelCoreData.h; path = Framework/Model/ModelCoreData.h; sourceTree = "<group>"; };
+		426099BF180472E700794422 /* ModelCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModelCoreData.m; path = Framework/Model/ModelCoreData.m; sourceTree = "<group>"; };
+		426099CA1805C0FD00794422 /* DatabaseCoreDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatabaseCoreDataStore.h; path = Framework/Database/Store/DatabaseCoreDataStore.h; sourceTree = "<group>"; };
+		426099CB1805C0FD00794422 /* DatabaseCoreDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DatabaseCoreDataStore.m; path = Framework/Database/Store/DatabaseCoreDataStore.m; sourceTree = "<group>"; };
+		426099CE1805C14E00794422 /* DatabaseAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatabaseAdapter.h; path = Framework/Database/Adapter/DatabaseAdapter.h; sourceTree = "<group>"; };
+		426099CF1805C14E00794422 /* DatabaseAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DatabaseAdapter.m; path = Framework/Database/Adapter/DatabaseAdapter.m; sourceTree = "<group>"; };
+		426099D21805EE8000794422 /* DatabaseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatabaseEntity.h; path = Framework/Database/Entity/DatabaseEntity.h; sourceTree = "<group>"; };
+		426099D31805EE8000794422 /* DatabaseEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DatabaseEntity.m; path = Framework/Database/Entity/DatabaseEntity.m; sourceTree = "<group>"; };
+		426099D6180607CA00794422 /* ArticlesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticlesModel.h; sourceTree = "<group>"; };
+		426099D7180607CA00794422 /* ArticlesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticlesModel.m; sourceTree = "<group>"; };
+		4296A44418199BF200A2B927 /* NSObject+Methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Methods.h"; path = "Framework/Categories/NSObject+Methods.h"; sourceTree = "<group>"; };
+		4296A44518199BF200A2B927 /* NSObject+Methods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Methods.m"; path = "Framework/Categories/NSObject+Methods.m"; sourceTree = "<group>"; };
+		4296A4481819B6B300A2B927 /* UIView+AutolayoutHidden.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutolayoutHidden.h"; sourceTree = "<group>"; };
+		4296A4491819B6B300A2B927 /* UIView+AutolayoutHidden.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutolayoutHidden.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,13 +186,14 @@
 		4206F38218033208008D65A3 /* ModelTest */ = {
 			isa = PBXGroup;
 			children = (
+				4206F3C218033305008D65A3 /* Framework */,
+				4206F3B8180332B1008D65A3 /* View Controllers */,
+				426099D5180607B300794422 /* Models */,
+				4222E7751818350C0054845A /* ManagedObjects */,
+				4296A4471819B69900A2B927 /* Categories */,
 				4206F38B18033208008D65A3 /* AppDelegate.h */,
 				4206F38C18033208008D65A3 /* AppDelegate.m */,
 				4206F38E18033208008D65A3 /* Main.storyboard */,
-				4206F39418033208008D65A3 /* MasterViewController.h */,
-				4206F39518033208008D65A3 /* MasterViewController.m */,
-				4206F39718033208008D65A3 /* DetailViewController.h */,
-				4206F39818033208008D65A3 /* DetailViewController.m */,
 				4206F39A18033208008D65A3 /* Images.xcassets */,
 				4206F39118033208008D65A3 /* ModelTest.xcdatamodeld */,
 				4206F38318033208008D65A3 /* Supporting Files */,
@@ -164,6 +228,192 @@
 				4206F3AB18033208008D65A3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4206F3B8180332B1008D65A3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4206F3BD180332BF008D65A3 /* BaseViewController.h */,
+				4206F3BE180332BF008D65A3 /* BaseViewController.m */,
+				42169A0B181721F60002471A /* ArticlesViewController.h */,
+				42169A0C181721F60002471A /* ArticlesViewController.m */,
+				4222E77218182D660054845A /* ArticleViewController.h */,
+				4222E77318182D660054845A /* ArticleViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		4206F3C218033305008D65A3 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				4222E77D181873400054845A /* Categories */,
+				4222E76D181821730054845A /* Command */,
+				421699FF18170C140002471A /* Controller */,
+				4206F3C418033317008D65A3 /* Object */,
+				4206F3C318033312008D65A3 /* Model */,
+				426099C1180490FA00794422 /* Database */,
+				4206F3CB18033D84008D65A3 /* Framework.h */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		4206F3C318033312008D65A3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4206F3D618034CB3008D65A3 /* State */,
+				426099721804465200794422 /* ModelInterface.h */,
+				4206F3D318034633008D65A3 /* ModelAbstract.h */,
+				4206F3D418034633008D65A3 /* ModelAbstract.m */,
+				426099BE180472E700794422 /* ModelCoreData.h */,
+				426099BF180472E700794422 /* ModelCoreData.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4206F3C418033317008D65A3 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				4206F3CC180343D5008D65A3 /* Config */,
+				4206F3CD180343FF008D65A3 /* Object.h */,
+				4206F3CE180343FF008D65A3 /* Object.m */,
+				4206F3DA18034F49008D65A3 /* ObjectArray.h */,
+				4206F3DB18034F49008D65A3 /* ObjectArray.m */,
+			);
+			name = Object;
+			sourceTree = "<group>";
+		};
+		4206F3CC180343D5008D65A3 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				4206F3C818033516008D65A3 /* ObjectConfig.h */,
+				4206F3C918033516008D65A3 /* ObjectConfig.m */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		4206F3D618034CB3008D65A3 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				4206F3D718034CD3008D65A3 /* ModelState.h */,
+				4206F3D818034CD3008D65A3 /* ModelState.m */,
+				42609973180446AD00794422 /* ModelStateInterface.h */,
+			);
+			name = State;
+			sourceTree = "<group>";
+		};
+		421699FF18170C140002471A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				42169A0518170F4B0002471A /* UIViewController+Object.h */,
+				42169A0618170F4B0002471A /* UIViewController+Object.m */,
+				42169A0018170C400002471A /* ViewControllerAbstract.h */,
+				42169A0118170C400002471A /* ViewControllerAbstract.m */,
+				42169A08181720100002471A /* ViewControllerModel.h */,
+				42169A09181720100002471A /* ViewControllerModel.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		4222E76D181821730054845A /* Command */ = {
+			isa = PBXGroup;
+			children = (
+				4222E76E181821790054845A /* Context */,
+			);
+			name = Command;
+			sourceTree = "<group>";
+		};
+		4222E76E181821790054845A /* Context */ = {
+			isa = PBXGroup;
+			children = (
+				4222E76F181821BC0054845A /* CommandContext.h */,
+				4222E770181821BC0054845A /* CommandContext.m */,
+			);
+			name = Context;
+			sourceTree = "<group>";
+		};
+		4222E7751818350C0054845A /* ManagedObjects */ = {
+			isa = PBXGroup;
+			children = (
+				4222E776181835210054845A /* Article.h */,
+				4222E777181835210054845A /* Article.m */,
+			);
+			name = ManagedObjects;
+			sourceTree = "<group>";
+		};
+		4222E779181835830054845A /* ManagedObject */ = {
+			isa = PBXGroup;
+			children = (
+				4222E77A181835BC0054845A /* NSManagedObject+Data.h */,
+				4222E77B181835BC0054845A /* NSManagedObject+Data.m */,
+			);
+			name = ManagedObject;
+			sourceTree = "<group>";
+		};
+		4222E77D181873400054845A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				4222E77E181873670054845A /* NSString+StringHelpers.h */,
+				4222E77F181873670054845A /* NSString+StringHelpers.m */,
+				4296A44418199BF200A2B927 /* NSObject+Methods.h */,
+				4296A44518199BF200A2B927 /* NSObject+Methods.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		426099C1180490FA00794422 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				4222E779181835830054845A /* ManagedObject */,
+				426099D11805EE5D00794422 /* Entity */,
+				426099CD1805C12B00794422 /* Adapter */,
+				426099C91805BD0100794422 /* Store */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		426099C91805BD0100794422 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				426099CA1805C0FD00794422 /* DatabaseCoreDataStore.h */,
+				426099CB1805C0FD00794422 /* DatabaseCoreDataStore.m */,
+			);
+			name = Store;
+			sourceTree = "<group>";
+		};
+		426099CD1805C12B00794422 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				426099CE1805C14E00794422 /* DatabaseAdapter.h */,
+				426099CF1805C14E00794422 /* DatabaseAdapter.m */,
+			);
+			name = Adapter;
+			sourceTree = "<group>";
+		};
+		426099D11805EE5D00794422 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				426099D21805EE8000794422 /* DatabaseEntity.h */,
+				426099D31805EE8000794422 /* DatabaseEntity.m */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		426099D5180607B300794422 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				426099D6180607CA00794422 /* ArticlesModel.h */,
+				426099D7180607CA00794422 /* ArticlesModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		4296A4471819B69900A2B927 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				4296A4481819B6B300A2B927 /* UIView+AutolayoutHidden.h */,
+				4296A4491819B6B300A2B927 /* UIView+AutolayoutHidden.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,11 +513,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4206F39918033208008D65A3 /* DetailViewController.m in Sources */,
-				4206F39618033208008D65A3 /* MasterViewController.m in Sources */,
+				4206F3C1180332BF008D65A3 /* BaseViewController.m in Sources */,
+				4206F3D918034CD3008D65A3 /* ModelState.m in Sources */,
+				4222E778181835210054845A /* Article.m in Sources */,
+				426099D8180607CA00794422 /* ArticlesModel.m in Sources */,
+				4206F3DC18034F49008D65A3 /* ObjectArray.m in Sources */,
+				4206F3CA18033516008D65A3 /* ObjectConfig.m in Sources */,
+				4222E77418182D660054845A /* ArticleViewController.m in Sources */,
+				426099D01805C14E00794422 /* DatabaseAdapter.m in Sources */,
+				4206F3CF180343FF008D65A3 /* Object.m in Sources */,
+				4222E780181873670054845A /* NSString+StringHelpers.m in Sources */,
+				426099CC1805C0FD00794422 /* DatabaseCoreDataStore.m in Sources */,
+				42169A0A181720100002471A /* ViewControllerModel.m in Sources */,
+				42169A0718170F4B0002471A /* UIViewController+Object.m in Sources */,
+				426099D41805EE8000794422 /* DatabaseEntity.m in Sources */,
+				42169A0D181721F60002471A /* ArticlesViewController.m in Sources */,
 				4206F39318033208008D65A3 /* ModelTest.xcdatamodeld in Sources */,
+				4296A44A1819B6B300A2B927 /* UIView+AutolayoutHidden.m in Sources */,
+				4206F3D518034633008D65A3 /* ModelAbstract.m in Sources */,
+				4222E771181821BC0054845A /* CommandContext.m in Sources */,
+				426099C0180472E700794422 /* ModelCoreData.m in Sources */,
 				4206F38D18033208008D65A3 /* AppDelegate.m in Sources */,
+				4296A44618199BF200A2B927 /* NSObject+Methods.m in Sources */,
+				4222E77C181835BC0054845A /* NSManagedObject+Data.m in Sources */,
 				4206F38918033208008D65A3 /* main.m in Sources */,
+				42169A0218170C400002471A /* ViewControllerAbstract.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +746,7 @@
 				4206F3B418033208008D65A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4206F3B518033208008D65A3 /* Build configuration list for PBXNativeTarget "ModelTestTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +755,7 @@
 				4206F3B718033208008D65A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

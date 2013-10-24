@@ -94,4 +94,10 @@
     return [self.controller objectAtIndexPath:indexPath];
 }
 
+
+-(NSManagedObject*)getEntity
+{
+    return [NSEntityDescription insertNewObjectForEntityForName:self.name inManagedObjectContext:self.adapter.context];
+}
+
 @end

@@ -7,8 +7,12 @@
 //
 
 #import "ArticlesViewController.h"
+#import "ArticleViewController.h"
 
 @implementation ArticlesViewController
+{
+    BOOL _hidden;
+}
 
 -(void)construct:(ObjectConfig *)config
 {
@@ -40,7 +44,19 @@
 }
 
 
+-(void)viewWillDisappear:(BOOL)animated
+{
+    _hidden = YES;
+}
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    if(_hidden){
+        _hidden = NO;
+        [self.model resetData];
+        [self.tableView reloadData];
+    }
+}
 
 - (IBAction)editPushed:(UIBarButtonItem*)sender
 {
@@ -55,6 +71,14 @@
 
 - (IBAction)unwindToArticlesView:(UIStoryboardSegue *)segue {
     //nothing goes here
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell*)sender
+{
+    if([segue.identifier isEqualToString:@"articlesToArticle"]){
+        ArticleViewController *viewController = (ArticleViewController*)segue.destinationViewController;        
+        viewController.model.row = [self.model objectAtIndexPath:[self.tableView indexPathForCell:sender]];
+    }
 }
 
 #pragma mark UITableView data source methods
@@ -79,6 +103,19 @@
     cell.textLabel.text = [row title];
     
     return cell;
+}
+
+//Delete method
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // If row is deleted, remove it from the list.
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        [self delete:@{@"object": [self.model objectAtIndexPath:indexPath]}];
+                    
+        [self.model resetData];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
 }
 
 @end

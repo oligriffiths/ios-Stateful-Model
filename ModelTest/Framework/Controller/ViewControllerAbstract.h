@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "Object.h"
 
+
 @interface ViewControllerAbstract : UIViewController <ObjectInterface>
+
+-(id)execute:(NSString*)action withData:(NSDictionary*)data;
+-(id)execute:(NSString*)action withContext:(CommandContext*)context;
 
 @end
