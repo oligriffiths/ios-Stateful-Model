@@ -63,7 +63,7 @@
 
 - (IBAction)savePushed:(id)sender
 {
-    if(self.model.row){
+    if(!self.model.row.isNew){
         [self edit:@{@"title":self.titleTextField.text, @"summary": self.summaryTextView.text}];
         [self.summaryTextView resignFirstResponder];
     }else{

@@ -45,6 +45,7 @@
 		426099D8180607CA00794422 /* ArticlesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 426099D7180607CA00794422 /* ArticlesModel.m */; };
 		4296A44618199BF200A2B927 /* NSObject+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = 4296A44518199BF200A2B927 /* NSObject+Methods.m */; };
 		4296A44A1819B6B300A2B927 /* UIView+AutolayoutHidden.m in Sources */ = {isa = PBXBuildFile; fileRef = 4296A4491819B6B300A2B927 /* UIView+AutolayoutHidden.m */; };
+		42E7BED2194F3F38000EE8CC /* NSManagedObject+IsNew.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7BED1194F3F38000EE8CC /* NSManagedObject+IsNew.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,8 @@
 		4296A44518199BF200A2B927 /* NSObject+Methods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Methods.m"; path = "Framework/Categories/NSObject+Methods.m"; sourceTree = "<group>"; };
 		4296A4481819B6B300A2B927 /* UIView+AutolayoutHidden.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutolayoutHidden.h"; sourceTree = "<group>"; };
 		4296A4491819B6B300A2B927 /* UIView+AutolayoutHidden.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutolayoutHidden.m"; sourceTree = "<group>"; };
+		42E7BED0194F3F38000EE8CC /* NSManagedObject+IsNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+IsNew.h"; sourceTree = "<group>"; };
+		42E7BED1194F3F38000EE8CC /* NSManagedObject+IsNew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+IsNew.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -356,6 +359,8 @@
 				4222E77F181873670054845A /* NSString+StringHelpers.m */,
 				4296A44418199BF200A2B927 /* NSObject+Methods.h */,
 				4296A44518199BF200A2B927 /* NSObject+Methods.m */,
+				42E7BED0194F3F38000EE8CC /* NSManagedObject+IsNew.h */,
+				42E7BED1194F3F38000EE8CC /* NSManagedObject+IsNew.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -519,6 +524,7 @@
 				426099D8180607CA00794422 /* ArticlesModel.m in Sources */,
 				4206F3DC18034F49008D65A3 /* ObjectArray.m in Sources */,
 				4206F3CA18033516008D65A3 /* ObjectConfig.m in Sources */,
+				42E7BED2194F3F38000EE8CC /* NSManagedObject+IsNew.m in Sources */,
 				4222E77418182D660054845A /* ArticleViewController.m in Sources */,
 				426099D01805C14E00794422 /* DatabaseAdapter.m in Sources */,
 				4206F3CF180343FF008D65A3 /* Object.m in Sources */,

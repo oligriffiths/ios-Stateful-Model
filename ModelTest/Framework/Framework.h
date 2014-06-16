@@ -8,6 +8,7 @@
 
 #import "NSObject+Methods.h"
 #import "NSString+StringHelpers.h"
+#import "NSManagedObject+IsNew.h"
 
 #import "ObjectConfig.h"
 #import "Object.h"
