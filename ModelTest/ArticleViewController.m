@@ -57,8 +57,8 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    self.titleTextField.text = ((Article*)[self.model row]).title;
-    self.summaryTextView.text = ((Article*)[self.model row]).summary;
+    self.titleTextField.text = ((Article*) self.model.row).title;
+    self.summaryTextView.text = ((Article*) self.model.row).summary;
 }
 
 - (IBAction)savePushed:(id)sender
